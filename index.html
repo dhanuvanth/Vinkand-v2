@@ -52,13 +52,14 @@
                 </div>
                 <div class="hero-model">
                     <model-viewer
-                        src="assets/models/demo.glb"
+                        src="assets/models/heart.glb"
+                        ios-src="assets/models/heart.usdz"
                         alt="An animated 3D Eagle"
                         auto-rotate
                         camera-controls
                         autoplay
                         shadow-intensity="1"
-                        camera-orbit="45deg 55deg 4.5m"
+                        camera-orbit="auto auto4.5m"
                         environment-image="neutral"
                         exposure="1"
                         interaction-prompt="none"
@@ -199,124 +200,114 @@
         <div class="container">
             <div class="section-header">
                 <h2>Our Portfolio</h2>
-                <p>Explore our latest projects and success stories</p>
+                <p>Explore our latest AR projects and success stories</p>
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/600x400" alt="AR Project">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/YCsuwhvcFgk?controls=0&autoplay=0&mute=1&playsinline=1&rel=0"
+                            title="Augmented Reality part 1 "
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                     <div class="portfolio-overlay">
-                        <h3>AR Product Visualization</h3>
-                        <p>Interactive AR experience for retail products</p>
-                        <a href="#" class="view-project">View Project</a>
+                        <h3>Augmented Reality part 1</h3>
+                        <p>Augmented Reality part 1</p>
+                        <a href="https://youtu.be/YCsuwhvcFgk" class="view-project" target="_blank">
+                            Watch on YouTube <i class="fab fa-youtube"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/600x400" alt="Motion Graphics">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/TH9qMNiwgL8?controls=0&autoplay=0&mute=1&playsinline=1&rel=0"
+                            title="Augmented Reality part 2"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                     <div class="portfolio-overlay">
-                        <h3>Brand Motion Graphics</h3>
-                        <p>Engaging motion graphics for brand storytelling</p>
-                        <a href="#" class="view-project">View Project</a>
+                        <h3>Augmented Reality part 2</h3>
+                        <p>Augmented Reality part 2</p>
+                        <a href="https://youtu.be/TH9qMNiwgL8" class="view-project" target="_blank">
+                            Watch on YouTube <i class="fab fa-youtube"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/600x400" alt="3D Model">
-                    <div class="portfolio-overlay">
-                        <h3>3D Product Models</h3>
-                        <p>Photorealistic 3D models for e-commerce</p>
-                        <a href="#" class="view-project">View Project</a>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/600x400" alt="Game">
-                    <div class="portfolio-overlay">
-                        <h3>Mobile Game Development</h3>
-                        <p>Casual gaming experience with stunning visuals</p>
-                        <a href="#" class="view-project">View Project</a>
-                    </div>
-                </div>
+                <!-- Add more portfolio items as needed -->
             </div>
         </div>
     </section>
 
-    <!-- Interactive 3D Models Section -->
-    <section id="3d-models" class="models">
+    <!-- 3D Models Section -->
+    <section id="models" class="models">
         <div class="container">
             <div class="section-header">
                 <h2>Interactive 3D Models</h2>
-                <p>Experience our 3D models in real-time</p>
+                <p>Explore our collection of interactive 3D models with AR capabilities</p>
             </div>
             <div class="models-grid">
                 <div class="model-card">
-                    <model-viewer
-                        src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
-                        alt="A 3D model of an astronaut"
-                        auto-rotate
-                        camera-controls
-                        shadow-intensity="1"
-                        environment-image="neutral"
-                        exposure="1"
-                        ar
-                        ar-modes="webxr scene-viewer quick-look"
-                    ></model-viewer>
-                    <div class="model-info">
-                        <h3>Interactive Character</h3>
-                        <p>Explore our detailed 3D character modeling</p>
+                    <div class="model-viewer-container">
+                        <model-viewer
+                            src="assets/models/dino/Stegosaurus.glb"
+                            ios-src="assets/models/dino/Stegosaurus.usdz"
+                            alt="A 3D model of a stegosaurus"
+                            auto-rotate
+                            camera-controls
+                            shadow-intensity="1"
+                            environment-image="neutral"
+                            exposure="1"
+                            autoplay
+                            ar
+                            ar-modes="webxr scene-viewer quick-look"
+                        ></model-viewer>
+                        
                     </div>
                 </div>
                 <div class="model-card">
-                    <model-viewer
-                        src="https://modelviewer.dev/shared-assets/models/RobotExpressive.glb"
-                        alt="A 3D model of a robot"
-                        auto-rotate
-                        camera-controls
-                        shadow-intensity="1"
-                        environment-image="neutral"
-                        exposure="1"
-                        ar
-                        ar-modes="webxr scene-viewer quick-look"
-                    ></model-viewer>
-                    <div class="model-info">
-                        <h3>Animated Robot</h3>
-                        <p>View our animation capabilities</p>
+                    <div class="model-viewer-container">
+                        <model-viewer
+                            src="assets/models/animals/deer.glb"
+                            ios-src="assets/models/animals/deer.usdz"
+                            alt="A 3D model of a deer"
+                            auto-rotate
+                            camera-controls
+                            shadow-intensity="1"
+                            environment-image="neutral"
+                            exposure="1"
+                            autoplay
+                            ar
+                            ar-modes="webxr scene-viewer quick-look"
+                        ></model-viewer>
+                        
                     </div>
                 </div>
                 <div class="model-card">
-                    <model-viewer
-                        src="https://modelviewer.dev/shared-assets/models/Chair.glb"
-                        alt="A 3D model of a chair"
-                        auto-rotate
-                        camera-controls
-                        shadow-intensity="1"
-                        environment-image="neutral"
-                        exposure="1"
-                        ar
-                        ar-modes="webxr scene-viewer quick-look"
-                    ></model-viewer>
-                    <div class="model-info">
-                        <h3>Product Visualization</h3>
-                        <p>See how we bring products to life</p>
+                    <div class="model-viewer-container">
+                        <model-viewer
+                            src="assets/models/animals/mantis.glb"
+                            ios-src="assets/models/animals/mantis.usdz"
+                            alt="A 3D model of a mantis"
+                            auto-rotate
+                            camera-controls
+                            shadow-intensity="1"
+                            environment-image="neutral"
+                            exposure="1"
+                            autoplay
+                            ar
+                            ar-modes="webxr scene-viewer quick-look"
+                        ></model-viewer>
+                        
                     </div>
                 </div>
             </div>
-            
         </div>
-        <div class="models-features">
-                <div class="feature hover-effect">
-                    <i class="fas fa-vr-cardboard"></i>
-                    <h4>AR View Available</h4>
-                    <p>View models in your space using AR</p>
-                </div>
-                <div class="feature hover-effect">
-                    <i class="fas fa-mouse"></i>
-                    <h4>Interactive Control</h4>
-                    <p>Rotate and zoom the models</p>
-                </div>
-                <div class="feature hover-effect">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h4>Cross-Platform</h4>
-                    <p>Works on all modern devices</p>
-                </div>
-            </div>
     </section>
 
     <!-- Live Demo Section -->
@@ -338,7 +329,7 @@
                 </div>
                 <div class="demo-visual">
                     <div class="qr-code">
-                        <img src="https://via.placeholder.com/200x200" alt="Demo QR Code">
+                        <img src="assets\qrcode\qr-code.png" alt="Demo QR Code">
                     </div>
                     <p class="demo-instruction">Scan to try AR demo</p>
                 </div>

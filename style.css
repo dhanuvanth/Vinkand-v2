@@ -660,7 +660,7 @@ body {
     }
 }
 
-/* Portfolio Section */
+/* Portfolio Section with YouTube Integration */
 .portfolio {
     padding: 100px 0;
     /* background: var(--background); */
@@ -668,22 +668,37 @@ body {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
+    margin-top: 2rem;
 }
 
 .portfolio-item {
     position: relative;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
-    aspect-ratio: 4/3;
+    background: rgba(16, 16, 40, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
-.portfolio-item img {
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+    border: none;
 }
 
 .portfolio-overlay {
@@ -702,32 +717,48 @@ body {
     transform: translateY(0);
 }
 
-.portfolio-item:hover img {
-    transform: scale(1.1);
-}
-
 .portfolio-overlay h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    color: var(--accent-color);
 }
 
 .portfolio-overlay p {
     margin-bottom: 1rem;
-    opacity: 0.8;
+    color: var(--light-text);
 }
 
 .view-project {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: var(--primary-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     color: white;
     text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 0, 0, 0.8); /* YouTube red */
     border-radius: 5px;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .view-project:hover {
-    background: var(--secondary-color);
+    background: rgba(255, 0, 0, 1);
+    transform: translateY(-2px);
+}
+
+.view-project i {
+    font-size: 1.2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-overlay {
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.5));
+    }
 }
 
 /* Interactive 3D Models Section */
@@ -738,83 +769,133 @@ body {
 
 .models-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-    margin-bottom: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
 }
 
 .model-card {
     background: rgba(16, 16, 40, 0.7);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border: 2px solid transparent;
+    border-radius: 20px;
     overflow: hidden;
+    transition: all 0.3s ease;
 }
 
-model-viewer {
-    width: 100%;
+.model-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 
+        0 8px 32px rgba(99, 102, 241, 0.2),
+        inset 0 0 32px rgba(0, 191, 255, 0.05);
+}
+
+.model-viewer-container {
+    position: relative;
     height: 400px;
-    background-color: var(--card-bg);
-    --poster-color: var(--card-bg);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.model-viewer-container model-viewer {
+    width: 100%;
+    height: 100%;
+    --poster-color: transparent;
     --progress-bar-color: var(--primary-color);
+    --progress-bar-height: 2px;
+}
+
+.model-controls {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.ar-button {
+    background: var(--gradient-1);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.ar-button:hover {
+    background: var(--gradient-2);
+    transform: translateY(-2px);
 }
 
 .model-info {
-    padding: 1.5rem;
+    padding: 2rem;
 }
 
 .model-info h3 {
     font-size: 1.5rem;
     color: var(--accent-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .model-info p {
     color: var(--light-text);
+    margin-bottom: 1.5rem;
 }
 
-.models-features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    text-align: center;
-    max-width: 1000px;
-    margin: 0 auto;
+.model-features {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
-.models-features .feature {
-    padding: 2rem;
-    background: var(--card-bg);
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+.model-features span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+    font-size: 0.9rem;
 }
 
-.models-features .feature i {
-    font-size: 2.5rem;
+.model-features i {
     color: var(--primary-color);
-    margin-bottom: 1rem;
 }
 
-.models-features .feature h4 {
-    font-size: 1.2rem;
-    color: var(--accent-color);
-    margin-bottom: 0.5rem;
+/* Loading Animation */
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
 }
 
-.models-features .feature p {
-    color: var(--light-text);
+model-viewer::part(default-progress-bar) {
+    height: 2px;
+    background: var(--gradient-1);
+    animation: pulse 1.5s infinite;
 }
 
-/* Add to the existing responsive design section */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    model-viewer {
+    .model-viewer-container {
         height: 300px;
     }
+    
+    .model-features {
+        gap: 1rem;
+    }
+}
 
-    .models-features {
-        grid-template-columns: 1fr;
+@media (max-width: 480px) {
+    .model-viewer-container {
+        height: 250px;
+    }
+    
+    .model-info {
+        padding: 1.5rem;
     }
 }
 
