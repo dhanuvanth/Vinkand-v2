@@ -907,7 +907,7 @@ html, body {
 @media (max-width: 768px) {
     .portfolio-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1rem;
         max-width: 500px;
     }
 
@@ -916,18 +916,31 @@ html, body {
         margin: 0 auto;
         display: flex;
         flex-direction: column;
+        height: 300px;
     }
 
     .video-container {
         width: 100%;
-        padding-bottom: 56.25%;
+        height: 200px;
         position: relative;
-        flex: 1;
-        min-height: 0;
+        flex: none;
     }
 
     .portfolio-overlay {
         flex-shrink: 0;
+        padding: 1rem 1.25rem;
+        height: 100px;
+    }
+
+    .portfolio-overlay h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .portfolio-overlay p {
+        font-size: 0.9rem;
+        margin: 0;
+        line-height: 1.4;
     }
 }
 
@@ -938,9 +951,16 @@ html, body {
     }
 
     .portfolio-item {
-        width: 100%;
-        margin: 0;
-        height: auto;
+        height: 270px;
+    }
+
+    .video-container {
+        height: 170px;
+    }
+
+    .portfolio-overlay {
+        padding: 0.875rem 1rem;
+        height: 100px;
     }
 }
 
@@ -2296,8 +2316,8 @@ body.menu-open {
 @media (max-width: 768px) {
     .portfolio-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
-        max-width: 500px; /* Limit maximum width on mobile */
+        gap: 1rem;
+        max-width: 500px;
     }
 
     .portfolio-item {
@@ -2305,18 +2325,31 @@ body.menu-open {
         margin: 0 auto;
         display: flex;
         flex-direction: column;
+        height: 300px;
     }
 
     .video-container {
         width: 100%;
-        padding-bottom: 56.25%;
+        height: 200px;
         position: relative;
-        flex: 1;
-        min-height: 0;
+        flex: none;
     }
 
     .portfolio-overlay {
         flex-shrink: 0;
+        padding: 1rem 1.25rem;
+        height: 100px;
+    }
+
+    .portfolio-overlay h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .portfolio-overlay p {
+        font-size: 0.9rem;
+        margin: 0;
+        line-height: 1.4;
     }
 }
 
@@ -2327,8 +2360,15 @@ body.menu-open {
     }
 
     .portfolio-item {
-        width: 100%;
-        margin: 0;
-        height: auto;
+        height: 270px;
+    }
+
+    .video-container {
+        height: 170px;
+    }
+
+    .portfolio-overlay {
+        padding: 0.875rem 1rem;
+        height: 100px;
     }
 }
