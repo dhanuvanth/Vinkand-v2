@@ -6,16 +6,13 @@
     <title>Vinkand Technologies - Immersive Technology Solutions</title>
     <!-- Model Viewer Script -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
-    <!-- Background Animation -->
-    <script src="background.js" defer></script>
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Add this canvas element right after the body tag -->
-    <canvas id="backgroundCanvas"></canvas>
-    
+    <div class="background-container"></div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -500,5 +497,6 @@
             document.querySelector('.nav-links').classList.toggle('active');
         });
     </script>
+    <script src="script.js"></script>
 </body>
 </html>

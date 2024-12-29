@@ -6,35 +6,66 @@
 }
 
 :root {
-    --primary-color: #0040ff;
-    --secondary-color: #00bfff;
-    --accent-color: #0040ff;
-    --text-color: #e2e8f0;
-    --light-text: #94a3b8;
-    --background: #0f172a;
-    --section-bg: rgba(30, 41, 59, 0.4);
-    --card-bg: rgba(16, 16, 40, 0.7);
-    --border-color: #334155;
-    --nav-bg: rgba(15, 23, 42, 0.95);
-    --gradient-1: linear-gradient(135deg, #00bfff 0%, #0040ff 100%);
-    --gradient-2: linear-gradient(135deg, #0040ff 0%, #00bfff 100%);
-    --shadow-color: rgba(0, 0, 0, 0.3);
+    --primary-color: #a855f7;    /* Purple */
+    --secondary-color: #9333ea;   /* Darker Purple */
+    --accent-color: #c084fc;     /* Lighter Purple */
+    --text-color: #ffffff;       /* White */
+    --light-text: #9ca3af;       /* Gray */
+    --background: #000000;       /* Pure Black */
+    --section-bg: rgba(17, 17, 17, 0.7);
+    --card-bg: rgba(23, 23, 23, 0.95);
+    --border-color: #27272a;
+    --nav-bg: rgba(0, 0, 0, 0.8);
+    --gradient-1: linear-gradient(135deg, #a855f7 0%, #6b21a8 100%);
+    --gradient-2: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%);
+    --shadow-color: rgba(139, 92, 246, 0.2);
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+
+
 body {
+    min-height: 100vh;
     font-family: 'Segoe UI', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background: linear-gradient(
-        135deg,
-        var(--background) 0%,
-        rgba(0, 64, 255, 0.1) 50%,
-        var(--background) 100%
-    );
+    background: transparent;
+}
+
+/* Background Container */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background: 
+        radial-gradient(
+            ellipse at top right,
+            rgba(168, 85, 247, 0.2) 0%,
+            transparent 50%
+        ),
+        radial-gradient(
+            circle at 60% 20%,
+            rgba(147, 51, 234, 0.15) 0%,
+            transparent 40%
+        ),
+        radial-gradient(
+            ellipse at bottom left,
+            rgba(168, 85, 247, 0.15) 0%,
+            transparent 50%
+        ),
+        radial-gradient(
+            circle at 20% 70%,
+            rgba(147, 51, 234, 0.1) 0%,
+            transparent 40%
+        ),
+        #000000;
+    pointer-events: none;
 }
 
 .container {
@@ -48,9 +79,10 @@ body {
     position: fixed;
     width: 100%;
     z-index: 1000;
-    background: rgba(10, 10, 31, 0.6);
+    background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(63, 63, 70, 0.4);
 }
 
 .navbar .container {
@@ -81,7 +113,7 @@ body {
 .logo h1 {
     font-size: 1.6rem;
     margin: 0;
-    background: var(--gradient-1);
+    background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
@@ -151,7 +183,7 @@ body {
     line-height: 1.2;
     margin-bottom: 1.5rem;
     color: var(--accent-color);
-    background: var(--gradient-1);
+    background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -315,11 +347,10 @@ body {
 
 .section-header h2 {
     font-size: 2.5rem;
-    color: var(--accent-color);
+    color: var(--text-color);
     margin-bottom: 1rem;
-    background: var(--gradient-1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: none;
+    -webkit-text-fill-color: initial;
 }
 
 .section-header p {
@@ -334,46 +365,77 @@ body {
 }
 
 .service-card {
-    background: rgba(16, 16, 40, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+    background: rgba(23, 23, 23, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(168, 85, 247, 0.1);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        rgba(168, 85, 247, 0.03) 0%,
+        rgba(147, 51, 234, 0.05) 50%,
+        rgba(168, 85, 247, 0.03) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-5px) translateZ(20px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+    border-color: rgba(168, 85, 247, 0.2);
+}
+
+.service-card:hover::before {
+    opacity: 1;
 }
 
 .service-icon {
-    width: 70px;
-    height: 70px;
-    background: var(--gradient-1);
-    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: rgba(168, 85, 247, 0.1);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1.5rem;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
 .service-icon i {
-    font-size: 2rem;
-    color: white;
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    background: rgba(168, 85, 247, 0.15);
+    transform: scale(1.1);
 }
 
 .service-card h3 {
     font-size: 1.5rem;
+    color: var(--text-color);
     margin-bottom: 1rem;
-    color: var(--accent-color);
+    position: relative;
+    transition: all 0.3s ease;
 }
 
 .service-card p {
     color: var(--light-text);
     margin-bottom: 1.5rem;
+    line-height: 1.7;
+    position: relative;
 }
 
 .learn-more {
@@ -383,11 +445,39 @@ body {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 500;
-    transition: gap 0.3s ease;
+    font-size: 0.95rem;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.learn-more i {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
 }
 
 .learn-more:hover {
-    gap: 0.8rem;
+    opacity: 1;
+}
+
+.learn-more:hover i {
+    transform: translateX(4px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .service-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .service-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .service-icon i {
+        font-size: 1.5rem;
+    }
 }
 
 /* Stats Section */
@@ -496,12 +586,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    background: rgba(16, 16, 40, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: var(--card-bg);
+    border: 1px solid rgba(63, 63, 70, 0.4);
+    border-radius: 8px;
     padding: 2rem;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
@@ -511,7 +599,7 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 10px;
     font-size: 1rem;
-    background: rgba(16, 16, 40, 0.6);
+    background: var(--card-bg);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     color: var(--text-color);
@@ -677,10 +765,11 @@ body {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
-    background: rgba(16, 16, 40, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--card-bg);
+    border: 1px solid rgba(63, 63, 70, 0.4);
+    border-radius: 12px;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
@@ -775,21 +864,17 @@ body {
 }
 
 .model-card {
-    background: rgba(16, 16, 40, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 2px solid transparent;
-    border-radius: 20px;
+    background: var(--card-bg);
+    border: 1px solid rgba(63, 63, 70, 0.4);
+    border-radius: 12px;
     overflow: hidden;
     transition: all 0.3s ease;
 }
 
 .model-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     border-color: var(--primary-color);
-    box-shadow: 
-        0 8px 32px rgba(99, 102, 241, 0.2),
-        inset 0 0 32px rgba(0, 191, 255, 0.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
 .model-viewer-container {
@@ -977,13 +1062,17 @@ model-viewer::part(default-progress-bar) {
 }
 
 .testimonial-card {
-    background: rgba(16, 16, 40, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    background: var(--card-bg);
+    border: 1px solid rgba(63, 63, 70, 0.4);
+    border-radius: 12px;
     padding: 2rem;
-    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary-color);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
 .testimonial-content {
@@ -1150,180 +1239,6 @@ model-viewer::part(default-progress-bar) {
     }
 }
 
-#backgroundCanvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: var(--background);
-    pointer-events: none;
-}
-
-/* Update section backgrounds to be more transparent */
-section {
-    position: relative;
-    z-index: 1;
-    background: rgba(15, 23, 42, 0.4); /* More transparent */
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-}
-
-/* Add depth to cards with glass effect */
-.service-card,
-.model-card,
-.testimonial-card,
-.portfolio-item {
-    background: rgba(16, 16, 40, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-/* Add hover effect for depth */
-.service-card:hover,
-.model-card:hover,
-.testimonial-card:hover {
-    transform: translateY(-5px) translateZ(20px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
-}
-
-/* Global glassmorphism styles */
-.navbar,
-.service-card,
-.model-card,
-.portfolio-item,
-.testimonial-card,
-.models-features .feature,
-.hero-model,
-.contact-form,
-.demo-visual .qr-code {
-    background: rgba(16, 16, 40, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-/* Section backgrounds with blur effect */
-section {
-    position: relative;
-    z-index: 1;
-    background: rgba(15, 23, 42, 0.4);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-}
-
-/* Enhanced navbar blur */
-.navbar {
-    background: rgba(10, 10, 31, 0.6);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-}
-
-/* Hero model enhanced glass effect */
-.hero-model {
-    background: rgba(0, 64, 255, 0.05);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(0, 191, 255, 0.2);
-    box-shadow: 
-        0 8px 32px rgba(99, 102, 241, 0.2),
-        inset 0 0 32px rgba(0, 191, 255, 0.05);
-}
-
-/* Card hover effects with enhanced glassmorphism */
-.service-card:hover,
-.model-card:hover,
-.portfolio-item:hover,
-.testimonial-card:hover,
-.models-features .feature:hover {
-    background: rgba(16, 16, 40, 0.8);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-color: var(--primary-color);
-    box-shadow: 
-        0 8px 32px rgba(99, 102, 241, 0.3),
-        inset 0 0 32px rgba(0, 191, 255, 0.05);
-    transform: translateY(-5px);
-}
-
-/* Form elements with glass effect */
-.contact-form input,
-.contact-form textarea {
-    background: rgba(16, 16, 40, 0.6);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--text-color);
-}
-
-/* Update root variables for enhanced glass effect */
-:root {
-    --card-bg: rgba(16, 16, 40, 0.7);
-    --section-bg: rgba(30, 41, 59, 0.4);
-    --nav-bg: rgba(15, 23, 42, 0.95);
-}
-
-/* Background gradient for sections */
-body {
-    background: linear-gradient(
-        135deg,
-        var(--background) 0%,
-        rgba(0, 64, 255, 0.1) 50%,
-        var(--background) 100%
-    );
-}
-
-/* Add subtle animation to glass cards */
-@keyframes glassShimmer {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.service-card,
-.model-card,
-.portfolio-item,
-.testimonial-card,
-.models-features .feature {
-    background-size: 200% 200%;
-    animation: glassShimmer 15s ease infinite;
-}
-
-.contact-form textarea {
-    min-height: 150px;
-    resize: vertical;
-    max-height: 300px;
-    line-height: 1.6;
-}
-
-.contact-form textarea::-webkit-scrollbar {
-    width: 8px;
-}
-
-.contact-form textarea::-webkit-scrollbar-track {
-    background: rgba(16, 16, 40, 0.6);
-    border-radius: 4px;
-}
-
-.contact-form textarea::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 4px;
-}
-
-.contact-form textarea::-webkit-scrollbar-thumb:hover {
-    background: var(--secondary-color);
-}
-
 /* Platforms Section */
 .platforms {
     padding: 50px 0;
@@ -1339,11 +1254,9 @@ body {
 }
 
 .platform-card {
-    background: rgba(16, 16, 40, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 2px solid transparent;
-    border-radius: 20px;
+    background: var(--card-bg);
+    border: 1px solid rgba(63, 63, 70, 0.4);
+    border-radius: 12px;
     padding: 2rem;
     transition: all 0.3s ease;
     position: relative;
@@ -1435,4 +1348,75 @@ body {
 /* Adjust section header for tighter spacing */
 .platforms .section-header {
     margin-bottom: 2rem;
+}
+
+/* Purple text highlights */
+.purple-text {
+    color: var(--primary-color);
+}
+
+/* Test background section */
+.test-bg {
+    display: none;
+}
+
+/* Ensure all sections are transparent to show the gradient */
+section {
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+/* Animation classes */
+.service-card, .platform-card, .portfolio-item, .model-card, .testimonial-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Navbar transition */
+.navbar {
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Notification styles */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.notification.success {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.notification.error {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+/* Mobile menu icon transition */
+.mobile-menu i {
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu i.fa-times {
+    transform: rotate(180deg);
 }
