@@ -2372,3 +2372,108 @@ body.menu-open {
         height: 100px;
     }
 }
+
+/* Footer Logo Styles */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;  /* Makes the logo circular */
+    object-fit: cover;   /* Ensures image fills the circle properly */
+    border: 2px solid var(--primary-color);  /* Optional: adds a border */
+}
+
+.footer-logo h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-logo {
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    
+    .footer-logo img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Footer Logo and Info Styles */
+.footer-info {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.footer-logo {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.footer-logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+}
+
+.footer-info h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.footer-info .hero-text {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.footer-info p {
+    color: var(--light-text);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-info {
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .footer-info .hero-text {
+        font-size: 1.1rem;
+    }
+}

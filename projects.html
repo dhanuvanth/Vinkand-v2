@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Vinkand Technologies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo/logo.jpg" alt="Vinkand Technologies Logo">
+                    <h1>Vinkand Technologies</h1>
+                </a>
+            </div>
+            <button class="mobile-menu-btn">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#services">Services</a>
+                <a href="projects.html">Projects</a>
+                <a href="about.html">About Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Hero Section -->
+    <section class="projects-hero">
+        <div class="container">
+            <div class="projects-hero-content">
+                <h1>Our Projects</h1>
+                <p>Explore our innovative AR/VR solutions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Categories -->
+    <section class="project-categories">
+        <div class="container">
+            <div class="categories-wrapper">
+                <button class="category-btn active" data-category="all">All Projects</button>
+                <button class="category-btn" data-category="ar">AR Solutions</button>
+                <button class="category-btn" data-category="vr">VR Experiences</button>
+                <button class="category-btn" data-category="mobile">Mobile Apps</button>
+                <button class="category-btn" data-category="web">Web AR</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-grid">
+        <div class="container">
+            <div class="projects-wrapper">
+                <!-- Project Card 1 -->
+                <div class="project-card" data-category="ar">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/YCsuwhvcFgk?controls=0&autoplay=0&mute=1&playsinline=1&rel=0"
+                            title="Augmented Reality part 1"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="project-info">
+                        <h3>Augmented Reality part 1</h3>
+                        <p>Exploring the fundamentals of AR technology and its applications</p>
+                        <div class="project-tags">
+                            <span>AR</span>
+                            <span>Tutorial</span>
+                            <span>Basics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card" data-category="ar">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/TH9qMNiwgL8?controls=0&autoplay=0&mute=1&playsinline=1&rel=0"
+                            title="Augmented Reality part 2"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="project-info">
+                        <h3>Augmented Reality part 2</h3>
+                        <p>Advanced concepts and practical implementations in AR</p>
+                        <div class="project-tags">
+                            <span>AR</span>
+                            <span>Advanced</span>
+                            <span>Implementation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more project cards with YouTube videos as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Stats -->
+    <section class="project-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">250+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Countries Served</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2024 Vinkand Technologies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
