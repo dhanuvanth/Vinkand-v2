@@ -2,30 +2,219 @@
     "projects": [
         {
             "id": 1,
-            "title": "Augmented Reality part 1",
-            "description": "Exploring the fundamentals of AR technology and its applications",
-            "categories": ["mobile", "world-tracking", "image-tracking"],
-            "imageUrl": "https://lh3.googleusercontent.com/bFW4ZS39iFW3aUt6griRbazFdFsRGgnq_rjSfjENcbSm9TbG4VNfZ8GLax0v4jMgoMmOyQSV-YeRvqLv02Cn4o3tjc3NgiD1lC8Hi6CwS9Dc7G2T8Q_XEzzBRwOJ9jpbmQ=w1280",
+            "title": "Augmented Reality Education",
+            "description": "We have developed an innovative augmented reality (AR) solution for educational institutions, transforming how students engage with subjects like history, chemistry, zoology, and biology. This cutting-edge technology overlays digital information onto the real world, creating an immersive learning environment.",
+            "categories": ["mobile", "education", "world-tracking"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/robfjxtannerveht25f9",
             "videoId": "YCsuwhvcFgk",
-            "tags": ["AR", "mobile", "education"]
+            "tags": ["AR", "Education", "Interactive Learning"]
         },
         {
             "id": 2,
-            "title": "Augmented Reality part 2",
-            "description": "Advanced concepts and practical implementations in AR",
-            "categories": ["mobile", "face-filters"],
-            "imageUrl": "assets/projects/ar-project2.jpg",
+            "title": "StarMapAR",
+            "description": "StarMapAR is an augmented reality app that lets you explore the solar system up close from your smartphone or tablet. Experience the planets in stunning 3D detail, right in your own space.",
+            "categories": ["mobile", "world-tracking", "education"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/v1/video-attachments/project_item/attachment/5cf11b7a911415e5f72488f32c51288d-1726761526797/App%20Demos",
             "videoId": "TH9qMNiwgL8",
-            "tags": ["AR", "mobile", "education"]
+            "tags": ["AR", "Education", "Space"]
         },
         {
             "id": 3,
-            "title": "Web AR Experience",
-            "description": "Creating immersive web-based AR experiences",
-            "categories": ["web", "virtual-try-on"],
-            "imageUrl": "assets/projects/web-ar1.jpg",
+            "title": "WebAR Product Display",
+            "description": "Experience a whole new way to explore beverages and foods with our immersive AR solution. Through augmented reality, you can visualize lifelike 3D models of various drinks and dishes right in front of you.",
+            "categories": ["web", "product-visualization"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/v1/video-attachments/project_item/attachment/fea43ddb921178782367076113edae39-1726547320604/Northside%20AR",
+            "videoId": "YCsuwhvcFgk",
+            "tags": ["WebAR", "Product Visualization", "E-commerce"]
+        },
+        {
+            "id": 4,
+            "title": "Virtual Try-On Solutions",
+            "description": "Revolutionary virtual try-on experiences for fashion and accessories, allowing customers to visualize products before purchase.",
+            "categories": ["web", "virtual-try-on", "face-filters"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/hpjyytzwfeodvqrbhrbm",
             "videoId": "TH9qMNiwgL8",
-            "tags": ["AR", "web", "interactive"]
+            "tags": ["AR", "Fashion", "E-commerce"]
+        },
+        {
+            "id": 5,
+            "title": "AR Portal Experience",
+            "description": "Experience a new way of tourism through AR portals, transporting users to different locations and environments instantly.",
+            "categories": ["mobile", "world-tracking", "location-based"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/i5yuknkowlnrkyrsxpnb",
+            "videoId": "YCsuwhvcFgk",
+            "tags": ["AR", "Tourism", "Interactive"]
+        },
+        {
+            "id": 6,
+            "title": "AR Anatomy Visualization",
+            "description": "Interactive 3D anatomy visualization using AR for medical education and training.",
+            "categories": ["mobile", "education", "image-tracking"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/wytpwkpnidr4dvcqaklk",
+            "videoId": "TH9qMNiwgL8",
+            "tags": ["AR", "Medical", "Education"]
+        },
+        {
+            "id": 7,
+            "title": "AR Museum Experience",
+            "description": "Bring artwork to life with interactive AR experiences in museums, making art more engaging and informative for visitors.",
+            "categories": ["web", "image-tracking", "education"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/v1/video-attachments/project_item/attachment/50c877ead0466965a69d2904d8c5dc3d-1712056849593/Video",
+            "videoId": "YCsuwhvcFgk",
+            "tags": ["AR", "Culture", "Education"]
+        },
+        {
+            "id": 8,
+            "title": "FloorCraft AR",
+            "description": "AR Tiles is an innovative app that brings your physical spaces to life using augmented reality. It allows users to place, customize, and interact with virtual tiles in real-world environments through their smartphones or AR glasses.",
+            "categories": ["mobile", "world-tracking", "product-visualization"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/v1/video-attachments/project_item/attachment/b85adc6aeb3c5c88e158838c4b67df20-1724048750915/AR%20Tiles",
+            "videoId": "TH9qMNiwgL8",
+            "tags": ["AR", "Interior Design", "Home Improvement"]
+        },
+        {
+            "id": 9,
+            "title": "AR Car Assistant",
+            "description": "This app provides live information about cars using AR technology, helping users understand vehicle features and maintenance needs in real-time.",
+            "categories": ["mobile", "object-tracking", "product-visualization"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/a6poht5f8zwfcqhzdhaa",
+            "videoId": "YCsuwhvcFgk",
+            "tags": ["AR", "Automotive", "Technical"]
+        },
+        {
+            "id": 10,
+            "title": "WebAR Home Furnishings",
+            "description": "View home appliances and furniture in your space before buying, similar to IKEA's AR experience. Perfect for visualizing how furniture fits in your home.",
+            "categories": ["web", "world-tracking", "product-visualization"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/v1/video-attachments/project_item/attachment/b38f77b66a2e6e0ab0fbc6b59468f8a2-1712818756412/video6104816761633249760",
+            "videoId": "TH9qMNiwgL8",
+            "tags": ["WebAR", "Furniture", "E-commerce"]
+        },
+        {
+            "id": 11,
+            "title": "AR Pathology Visualization",
+            "description": "Advanced AR application for medical pathology, enabling detailed visualization of medical specimens and educational content for medical professionals.",
+            "categories": ["mobile", "image-tracking", "education"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/v1/video-attachments/project_item/attachment/62b68b1b0b851adfa8cfc4c294cf047c-1712057910753/video6307674427869891808",
+            "videoId": "YCsuwhvcFgk",
+            "tags": ["AR", "Medical", "Professional"]
+        },
+        {
+            "id": 12,
+            "title": "AR QR Code Art",
+            "description": "Interactive artwork that comes to life through QR codes, blending traditional art with augmented reality technology.",
+            "categories": ["web", "image-tracking"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_portfolio_project_large_non_exp/v1/attachments/project_item/attachment/cce9d81c55183ffc152deab290cc19a3-1712056713713/QRArt-PhotoRoom.png",
+            "videoId": "TH9qMNiwgL8",
+            "tags": ["AR", "Art", "Interactive"]
+        },
+        {
+            "id": 13,
+            "title": "AR Sports Training",
+            "description": "Real-time sports training application that uses AR to analyze player movements, provide instant feedback, and improve performance through visual guides.",
+            "categories": ["mobile", "world-tracking", "object-tracking"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/v1/video-attachments/project_item/attachment/d8f77b66a2e6e0ab0fbc6b59468f8a2-1712818756412/sports",
+            "videoId": "YCsuwhvcFgk",
+            "tags": ["AR", "Sports", "Training"]
+        },
+        {
+            "id": 14,
+            "title": "AR Retail Navigator",
+            "description": "In-store AR navigation system that helps customers locate products, view product information, and receive personalized recommendations in real-time.",
+            "categories": ["mobile", "location-based", "product-visualization"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/v1/video-attachments/project_item/attachment/retail-nav",
+            "videoId": "TH9qMNiwgL8",
+            "tags": ["AR", "Retail", "Navigation"]
+        },
+        {
+            "id": 15,
+            "title": "Industrial AR Training",
+            "description": "Advanced AR training platform for industrial workers, providing step-by-step guidance for complex machinery operations and maintenance procedures.",
+            "categories": ["mobile", "object-tracking", "education"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/v1/video-attachments/project_item/attachment/industrial-ar",
+            "videoId": "YCsuwhvcFgk",
+            "tags": ["AR", "Industrial", "Training"]
+        },
+        {
+            "id": 16,
+            "title": "AR Architecture Viewer",
+            "description": "Visualize architectural designs in real-world scale, allowing clients to walk through virtual buildings and make informed decisions about their projects.",
+            "categories": ["mobile", "world-tracking", "location-based"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/v1/video-attachments/project_item/attachment/arch-viewer",
+            "videoId": "TH9qMNiwgL8",
+            "tags": ["AR", "Architecture", "Design"]
+        },
+        {
+            "id": 17,
+            "title": "AR Makeup Studio",
+            "description": "Virtual makeup application using advanced face tracking, allowing users to try different cosmetic products and looks in real-time.",
+            "categories": ["web", "face-filters", "virtual-try-on"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/v1/video-attachments/project_item/attachment/makeup-ar",
+            "videoId": "YCsuwhvcFgk",
+            "tags": ["AR", "Beauty", "Cosmetics"]
+        },
+        {
+            "id": 18,
+            "title": "AR Restaurant Menu",
+            "description": "Interactive restaurant menu that shows 3D models of dishes, helping customers make informed choices by visualizing portion sizes and presentations.",
+            "categories": ["web", "product-visualization"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/v1/video-attachments/project_item/attachment/menu-ar",
+            "videoId": "TH9qMNiwgL8",
+            "tags": ["AR", "Food", "Hospitality"]
+        },
+        {
+            "id": 19,
+            "title": "AR Gaming Platform",
+            "description": "Immersive AR gaming platform that transforms real-world environments into interactive playgrounds, featuring multiplayer capabilities and dynamic object tracking.",
+            "categories": ["mobile", "world-tracking", "object-tracking"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/v1/attachments/gaming-ar",
+            "videoId": "YCsuwhvcFgk",
+            "tags": ["AR", "Gaming", "Entertainment"]
+        },
+        {
+            "id": 20,
+            "title": "AR Jewelry Try-On",
+            "description": "Sophisticated virtual try-on solution for jewelry, allowing customers to visualize how different pieces look on them using precise hand and neck tracking.",
+            "categories": ["web", "face-filters", "virtual-try-on"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/v1/attachments/jewelry-ar",
+            "videoId": "TH9qMNiwgL8",
+            "tags": ["AR", "Fashion", "Jewelry"]
+        },
+        {
+            "id": 21,
+            "title": "AR Real Estate Tour",
+            "description": "Virtual property tours enhanced with AR, allowing potential buyers to visualize furniture placement, view property information, and see renovation possibilities.",
+            "categories": ["mobile", "world-tracking", "location-based"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/v1/attachments/realestate-ar",
+            "videoId": "YCsuwhvcFgk",
+            "tags": ["AR", "Real Estate", "Virtual Tour"]
+        },
+        {
+            "id": 22,
+            "title": "AR Event Planning",
+            "description": "Event planning tool that uses AR to visualize venue layouts, decorations, and seating arrangements before the actual setup.",
+            "categories": ["mobile", "world-tracking", "product-visualization"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/v1/attachments/event-ar",
+            "videoId": "TH9qMNiwgL8",
+            "tags": ["AR", "Events", "Planning"]
+        },
+        {
+            "id": 23,
+            "title": "AR Packaging Scanner",
+            "description": "Interactive product packaging that comes to life through AR, providing nutritional information, recipes, and brand storytelling experiences.",
+            "categories": ["mobile", "image-tracking", "product-visualization"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/v1/attachments/package-ar",
+            "videoId": "YCsuwhvcFgk",
+            "tags": ["AR", "Packaging", "Marketing"]
+        },
+        {
+            "id": 24,
+            "title": "AR Dental Visualization",
+            "description": "Dental consultation tool using AR to show treatment plans, expected outcomes, and oral health information in an interactive 3D format.",
+            "categories": ["mobile", "face-filters", "medical"],
+            "imageUrl": "https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/v1/attachments/dental-ar",
+            "videoId": "TH9qMNiwgL8",
+            "tags": ["AR", "Dental", "Healthcare"]
         }
     ],
     "categories": [
@@ -34,36 +223,56 @@
             "name": "All Projects"
         },
         {
-            "id": "mobile",
-            "name": "Mobile Apps"
+            "id": "education",
+            "name": "Education"
         },
         {
-            "id": "web",
-            "name": "Web AR"
+            "id": "automotive",
+            "name": "Automotive"
         },
         {
-            "id": "world-tracking",
-            "name": "World Tracking AR"
+            "id": "medical",
+            "name": "Medical & Healthcare"
         },
         {
-            "id": "image-tracking",
-            "name": "Image Tracking AR"
+            "id": "art",
+            "name": "Art & Culture"
         },
         {
-            "id": "location-based",
-            "name": "Location Based AR"
+            "id": "sports",
+            "name": "Sports & Fitness"
         },
         {
-            "id": "object-tracking",
-            "name": "Object Tracking AR"
+            "id": "retail",
+            "name": "Retail"
         },
         {
-            "id": "face-filters",
-            "name": "Face Filters AR"
+            "id": "industrial",
+            "name": "Industrial"
         },
         {
-            "id": "virtual-try-on",
-            "name": "Virtual Try-On"
+            "id": "architecture",
+            "name": "Architecture"
+        },
+        {
+            "id": "beauty",
+            "name": "Beauty & Cosmetics"
+        },
+        {
+            "id": "hospitality",
+            "name": "Food & Hospitality"
+        },
+        {
+            "id": "gaming",
+            "name": "Gaming & Entertainment"
+        },
+        {
+            "id": "real-estate",
+            "name": "Real Estate"
+        },
+        {
+            "id": "events",
+            "name": "Event Planning"
         }
     ]
 } 
