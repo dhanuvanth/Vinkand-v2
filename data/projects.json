@@ -1,0 +1,69 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "Augmented Reality part 1",
+            "description": "Exploring the fundamentals of AR technology and its applications",
+            "categories": ["mobile", "world-tracking", "image-tracking"],
+            "imageUrl": "https://lh3.googleusercontent.com/bFW4ZS39iFW3aUt6griRbazFdFsRGgnq_rjSfjENcbSm9TbG4VNfZ8GLax0v4jMgoMmOyQSV-YeRvqLv02Cn4o3tjc3NgiD1lC8Hi6CwS9Dc7G2T8Q_XEzzBRwOJ9jpbmQ=w1280",
+            "videoId": "YCsuwhvcFgk",
+            "tags": ["AR", "mobile", "education"]
+        },
+        {
+            "id": 2,
+            "title": "Augmented Reality part 2",
+            "description": "Advanced concepts and practical implementations in AR",
+            "categories": ["mobile", "face-filters"],
+            "imageUrl": "assets/projects/ar-project2.jpg",
+            "videoId": "TH9qMNiwgL8",
+            "tags": ["AR", "mobile", "education"]
+        },
+        {
+            "id": 3,
+            "title": "Web AR Experience",
+            "description": "Creating immersive web-based AR experiences",
+            "categories": ["web", "virtual-try-on"],
+            "imageUrl": "assets/projects/web-ar1.jpg",
+            "videoId": "TH9qMNiwgL8",
+            "tags": ["AR", "web", "interactive"]
+        }
+    ],
+    "categories": [
+        {
+            "id": "all",
+            "name": "All Projects"
+        },
+        {
+            "id": "mobile",
+            "name": "Mobile Apps"
+        },
+        {
+            "id": "web",
+            "name": "Web AR"
+        },
+        {
+            "id": "world-tracking",
+            "name": "World Tracking AR"
+        },
+        {
+            "id": "image-tracking",
+            "name": "Image Tracking AR"
+        },
+        {
+            "id": "location-based",
+            "name": "Location Based AR"
+        },
+        {
+            "id": "object-tracking",
+            "name": "Object Tracking AR"
+        },
+        {
+            "id": "face-filters",
+            "name": "Face Filters AR"
+        },
+        {
+            "id": "virtual-try-on",
+            "name": "Virtual Try-On"
+        }
+    ]
+} 

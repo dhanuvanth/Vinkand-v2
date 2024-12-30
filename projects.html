@@ -28,10 +28,10 @@
             </button>
             <div class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="#services">Services</a>
+                <a href="index.html#services">Services</a>
                 <a href="projects.html">Projects</a>
                 <a href="about.html">About Us</a>
-                <a href="#contact">Contact</a>
+                <a href="index.html#contact">Contact</a>
             </div>
         </div>
     </nav>
@@ -50,11 +50,7 @@
     <section class="project-categories">
         <div class="container">
             <div class="categories-wrapper">
-                <button class="category-btn active" data-category="all">All Projects</button>
-                <button class="category-btn" data-category="ar">AR Solutions</button>
-                <button class="category-btn" data-category="vr">VR Experiences</button>
-                <button class="category-btn" data-category="mobile">Mobile Apps</button>
-                <button class="category-btn" data-category="web">Web AR</button>
+                <!-- Categories will be populated by JavaScript -->
             </div>
         </div>
     </section>
@@ -63,51 +59,7 @@
     <section class="projects-grid">
         <div class="container">
             <div class="projects-wrapper">
-                <!-- Project Card 1 -->
-                <div class="project-card" data-category="ar">
-                    <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/YCsuwhvcFgk?controls=0&autoplay=0&mute=1&playsinline=1&rel=0"
-                            title="Augmented Reality part 1"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="project-info">
-                        <h3>Augmented Reality part 1</h3>
-                        <p>Exploring the fundamentals of AR technology and its applications</p>
-                        <div class="project-tags">
-                            <span>AR</span>
-                            <span>Tutorial</span>
-                            <span>Basics</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Card 2 -->
-                <div class="project-card" data-category="ar">
-                    <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/TH9qMNiwgL8?controls=0&autoplay=0&mute=1&playsinline=1&rel=0"
-                            title="Augmented Reality part 2"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="project-info">
-                        <h3>Augmented Reality part 2</h3>
-                        <p>Advanced concepts and practical implementations in AR</p>
-                        <div class="project-tags">
-                            <span>AR</span>
-                            <span>Advanced</span>
-                            <span>Implementation</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Add more project cards with YouTube videos as needed -->
+                <!-- Projects will be populated by JavaScript -->
             </div>
         </div>
     </section>
@@ -117,15 +69,15 @@
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-number">250+</div>
+                    <div class="stat-number">500+</div>
                     <div class="stat-label">Projects Completed</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">50+</div>
+                    <div class="stat-number">150+</div>
                     <div class="stat-label">Happy Clients</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">15+</div>
+                    <div class="stat-number">25+</div>
                     <div class="stat-label">Countries Served</div>
                 </div>
                 <div class="stat-item">
@@ -144,5 +96,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="project.js"></script>
 </body>
 </html>
