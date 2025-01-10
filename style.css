@@ -1980,3 +1980,40 @@ body.menu-open {
         width: auto;
     }
 }
+
+/* Breadcrumb Styles */
+.breadcrumb {
+    background: rgba(23, 23, 23, 0.95);
+    padding: 1rem 0;
+    margin-top: 80px;
+    border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+}
+
+.breadcrumb ol {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '/';
+    margin-left: 0.5rem;
+    color: var(--light-text);
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: var(--accent-color);
+}
+
+.breadcrumb span {
+    color: var(--light-text);
+}
