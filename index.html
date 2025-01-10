@@ -69,6 +69,11 @@
       }
     }
     </script>
+
+    <!-- Add preload for critical resources -->
+    <link rel="preload" href="assets/logo/logo.jpg" as="image">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
 </head>
 <body>
     <div class="background-container"></div>
@@ -508,5 +513,28 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="contact.js"></script>
     <script src="script.js"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What AR/VR solutions do you offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer World Tracking AR, Image Tracking AR, Location Based AR, Object Tracking AR, Face Filters AR, and Virtual Try-On solutions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which platforms do you support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We support Android, iOS, WebAR, and Meta Quest platforms."
+        }
+      }]
+    }
+    </script>
 </body>
 </html>
