@@ -1,91 +1,19 @@
-class ContactForm {
-
-    
-
-    constructor() {
-        this.form = document.getElementById('contact-form');
-        if (!this.form) return;
-        
-        this.submitBtn = this.form.querySelector('.submit-btn');
-        this.btnText = this.submitBtn.querySelector('.btn-text');
-        this.btnLoading = this.submitBtn.querySelector('.btn-loading');
-        
-        this.init();
+// Initialize EmailJS with your user ID
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize EmailJS
+    if (window.emailjs) {
+        emailjs.init("1nQgt8wdX2oWi5sul");
     }
 
-    init() {
-        if (!window.emailjs) {
-            console.error('EmailJS is not loaded');
-            return;
-        }
-        
-        this.form.addEventListener('submit', (e) => this.handleSubmit(e));
-    }
+    const contactForm = document.getElementById('contact-form');
+    if (!contactForm) return;
 
-    async handleSubmit(e) {
-        e.preventDefault();
-        
-        // Show loading state
-        this.setLoadingState(true);
-
-        // Get form data
-        const formData = {
-            name: this.form.name.value,
-            email: this.form.email.value,
-            subject: this.form.subject.value,
-            message: this.form.message.value
-        };
-
-        try {
-            if (!window.emailjs) {
-                throw new Error('EmailJS is not loaded');
-            }
-            emailjs.init("1nQgt8wdX2oWi5sul"); // Replace with your EmailJS public key
-
-            // Send email using EmailJS
-            const response = await emailjs.send(
-                'service_gtkvcm3',
-                'template_ofs3ghd',
-                {
-                    from_name: formData.name,
-                    from_email: formData.email,
-                    subject: formData.subject,
-                    message: formData.message,
-                    to_name: 'Vinkand Technologies' // Add recipient name
-                }
-            );
-
-            if (response.status === 200) {
-                this.showNotification('Message sent successfully!', 'success');
-                this.form.reset();
-            } else {
-                throw new Error('Failed to send message');
-            }
-        } catch (error) {
-            console.error('Error sending email:', error);
-            this.showNotification(
-                'Failed to send message. Please try again or contact us directly.',
-                'error'
-            );
-        } finally {
-            // Hide loading state
-            this.setLoadingState(false);
-        }
-    }
-
-    setLoadingState(isLoading) {
-        if (this.submitBtn) {
-            this.submitBtn.disabled = isLoading;
-            this.btnText.style.display = isLoading ? 'none' : 'block';
-            this.btnLoading.style.display = isLoading ? 'block' : 'none';
-        }
-    }
-
-    showNotification(message, type) {
+    function showNotification(type, message) {
         // Remove any existing notifications
         const existingNotifications = document.querySelectorAll('.notification');
         existingNotifications.forEach(notification => notification.remove());
 
+        // Create notification element
         const notification = document.createElement('div');
         notification.className = `notification ${type}`;
         notification.innerHTML = `
@@ -116,9 +44,54 @@ class ContactForm {
             }, 500);
         }, 4000);
     }
-}
 
-// Initialize contact form
-document.addEventListener('DOMContentLoaded', () => {
-    new ContactForm();
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form elements
+        const submitBtn = this.querySelector('.submit-btn');
+        const btnText = submitBtn.querySelector('.btn-text');
+        const btnLoading = submitBtn.querySelector('.btn-loading');
+        
+        // Show loading state
+        submitBtn.disabled = true;
+        btnText.style.display = 'none';
+        btnLoading.style.display = 'block';
+
+        // Get form data directly without transforming field names
+        const formData = {
+            name: this.querySelector('#name').value.trim(),
+            email: this.querySelector('#email').value.trim(),
+            subject: this.querySelector('#subject').value.trim(),
+            message: this.querySelector('#message').value.trim()
+        };
+
+        // Validate form data
+        if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+            showNotification('error', 'Please fill in all fields');
+            // Reset button state
+            submitBtn.disabled = false;
+            btnText.style.display = 'block';
+            btnLoading.style.display = 'none';
+            return;
+        }
+
+        // Send email using EmailJS with the original service and template IDs
+        // but passing form data directly without transforming field names
+        emailjs.send('service_gtkvcm3', 'template_ofs3ghd', formData)
+            .then(() => {
+                showNotification('success', 'Message sent successfully!');
+                this.reset();
+            })
+            .catch((error) => {
+                console.error('Error sending email:', error);
+                showNotification('error', 'Failed to send message. Please try again or contact us directly.');
+            })
+            .finally(() => {
+                // Reset button state
+                submitBtn.disabled = false;
+                btnText.style.display = 'block';
+                btnLoading.style.display = 'none';
+            });
+    });
 }); 
