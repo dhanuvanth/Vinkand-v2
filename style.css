@@ -769,8 +769,8 @@ html, body {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
     margin-bottom: 3rem;
 }
 
@@ -820,6 +820,7 @@ html, body {
 
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
     }
 }
 
