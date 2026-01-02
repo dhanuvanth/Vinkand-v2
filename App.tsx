@@ -8,8 +8,42 @@ import { SERVICES, STATS, TECH_PARTNERS, WORKFLOW, EXPLORATIONS, FAQ_ITEMS, TEST
 import SectionHeader from './components/SectionHeader';
 import AIConsultant from './components/AIConsultant';
 import logoImage from '@assets/logo/logo.png';
+import chairPosterImage from '@assets/modelImage/chair_image.png';
 
 // --- Shared Components & Hooks ---
+
+// Google Analytics tracking
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+    dataLayer: any[];
+  }
+}
+
+const useGoogleAnalytics = () => {
+  const location = useLocation();
+  
+  useEffect(() => {
+    if (typeof window.gtag === 'function') {
+      // Track page view on route change for SPA
+      const path = location.pathname + location.hash;
+      // Get GA ID from the script tag or use default
+      const gaScript = document.querySelector('script[src*="googletagmanager.com/gtag/js"]');
+      if (gaScript) {
+        const src = gaScript.getAttribute('src') || '';
+        const match = src.match(/id=([^&]+)/);
+        const gaId = match ? match[1] : null;
+        
+        if (gaId) {
+          window.gtag('config', gaId, {
+            page_path: path,
+            page_title: document.title
+          });
+        }
+      }
+    }
+  }, [location]);
+};
 
 const useSEO = (title: string, description?: string) => {
   useEffect(() => {
@@ -391,7 +425,7 @@ const HomePage: React.FC = () => {
                <div className="relative z-10 w-full h-full flex items-center justify-center">
                   <model-viewer 
                     src="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/SheenChair/glTF-Binary/SheenChair.glb"
-                    poster="https://images.unsplash.com/photo-1592078615290-033ee584e267?auto=format&fit=crop&q=80&w=800"
+                    poster={chairPosterImage}
                     alt="A 3D model of a modern velvet chair"
                     shadow-intensity="1"
                     shadow-softness="1"
@@ -1370,29 +1404,38 @@ const Footer: React.FC = () => (
   </footer>
 );
 
+// Component to track analytics inside Router context
+const AppContent: React.FC = () => {
+  useGoogleAnalytics();
+  
+  return (
+    <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-blue-200 selection:text-blue-900 flex flex-col">
+      <Navbar />
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services/:id" element={<ServiceDetailPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:id" element={<BlogDetailPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/terms" element={<TermsPage />} />
+          <Route path="/sla" element={<SLAPage />} />
+        </Routes>
+      </main>
+      <Footer />
+      <AIConsultant />
+    </div>
+  );
+};
+
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-blue-200 selection:text-blue-900 flex flex-col">
-        <Navbar />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/services/:id" element={<ServiceDetailPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/portfolio" element={<PortfolioPage />} />
-            <Route path="/products" element={<ProductsPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/blog/:id" element={<BlogDetailPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/privacy" element={<PrivacyPage />} />
-            <Route path="/terms" element={<TermsPage />} />
-            <Route path="/sla" element={<SLAPage />} />
-          </Routes>
-        </main>
-        <Footer />
-        <AIConsultant />
-      </div>
+      <AppContent />
     </Router>
   );
 };

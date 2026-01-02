@@ -27,6 +27,35 @@
   <link rel="canonical" href="https://vinkand.com/">
   <link rel="icon" type="image/png" href="/assets/logo/falcon.png">
 
+  <!-- Google Analytics -->
+  <script>
+    // Google Analytics - Replace G-BVYRQLVQDJ with your actual GA4 Measurement ID
+    // Or set VITE_GA_MEASUREMENT_ID in your .env file
+    (function() {
+      // Get GA ID - replace this with your actual ID or use environment variable
+      const gaId = 'G-BVYRQLVQDJ'; // e.g., 'G-XXXXXXXXXX'
+      
+      // Only initialize if we have a valid GA ID
+      if (gaId && gaId !== 'G-BVYRQLVQDJ' && gaId.startsWith('G-')) {
+        // Load gtag.js
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
+        document.head.appendChild(script);
+        
+        // Initialize dataLayer and gtag
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', gaId, {
+          page_path: window.location.hash || window.location.pathname,
+          send_page_view: true
+        });
+      }
+    })();
+  </script>
+
   <!-- GEO & SEO Structured Data -->
   <script type="application/ld+json">
     {
