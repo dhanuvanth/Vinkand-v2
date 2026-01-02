@@ -19,6 +19,28 @@ export default defineConfig(({ mode }) => {
           '@': path.resolve(__dirname, '.'),
           '@assets': path.resolve(__dirname, './assets'),
         }
+      },
+      build: {
+        // Performance optimizations
+        minify: 'esbuild',
+        cssMinify: true,
+        sourcemap: false,
+        rollupOptions: {
+          output: {
+            manualChunks: {
+              'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+              'lucide': ['lucide-react'],
+            }
+          }
+        },
+        // Optimize chunk size
+        chunkSizeWarningLimit: 1000,
+        // Enable compression
+        reportCompressedSize: true,
+      },
+      // Optimize dependencies
+      optimizeDeps: {
+        include: ['react', 'react-dom', 'react-router-dom', 'lucide-react'],
       }
     };
 });

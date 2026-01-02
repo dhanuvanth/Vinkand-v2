@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>VinKand Technologies | AI, AR & Immersive Digital Solutions</title>
   <meta name="description" content="VinKand Technologies - Architecting the digital future with Enterprise AI, AR/VR experiences, and high-performance SaaS solutions. Secure, scalable, and intelligent innovation for global enterprises.">
   <meta name="keywords" content="VinKand, AI Solutions, AR VR Development, Enterprise Software, SaaS, Digital Transformation, Immersive Technology, Machine Learning">
@@ -26,8 +27,9 @@
 
   <link rel="canonical" href="https://vinkand.com/">
   <link rel="icon" type="image/png" href="/assets/logo/falcon.png">
+  <link rel="preload" href="/assets/logo/logo.png" as="image" type="image/png">
 
-  <!-- Google Analytics -->
+  <!-- Google Analytics - Deferred for better performance -->
   <script>
     // Google Analytics - Replace G-BVYRQLVQDJ with your actual GA4 Measurement ID
     // Or set VITE_GA_MEASUREMENT_ID in your .env file
@@ -37,10 +39,22 @@
       
       // Only initialize if we have a valid GA ID
       if (gaId && gaId !== 'G-BVYRQLVQDJ' && gaId.startsWith('G-')) {
-        // Load gtag.js
+        // Defer GA loading until after page load
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', function() {
+            loadGA(gaId);
+          });
+        } else {
+          // Page already loaded, load GA immediately
+          setTimeout(loadGA, 100, gaId);
+        }
+      }
+      
+      function loadGA(id) {
+        // Load gtag.js asynchronously
         var script = document.createElement('script');
         script.async = true;
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
         document.head.appendChild(script);
         
         // Initialize dataLayer and gtag
@@ -48,7 +62,7 @@
         function gtag(){dataLayer.push(arguments);}
         window.gtag = gtag;
         gtag('js', new Date());
-        gtag('config', gaId, {
+        gtag('config', id, {
           page_path: window.location.hash || window.location.pathname,
           send_page_view: true
         });
@@ -91,11 +105,18 @@
       }
     }
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+  <!-- Preconnect to external domains for faster loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  
+  <!-- Load fonts with font-display swap for better performance -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+  
+  <!-- Defer model-viewer script -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js" defer></script>
   <style>
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
@@ -113,6 +134,7 @@
     .gradient-text {
       background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
@@ -206,7 +228,6 @@
       scrollbar-width: none;
     }
   </style>
-  <link rel="stylesheet" href="/index.css">
 </head>
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden antialiased selection:bg-blue-100 selection:text-blue-900">
   <div id="root"></div>

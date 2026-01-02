@@ -436,6 +436,7 @@ const HomePage: React.FC = () => {
                     auto-rotate
                     touch-action="pan-y"
                     ar
+                    loading="lazy"
                     style={{ width: '100%', height: '100%' }}
                   >
                   </model-viewer>
@@ -526,7 +527,7 @@ const HomePage: React.FC = () => {
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl group border-4 border-white">
                           <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors z-10"></div>
                           {/* Adjusted Height for Mobile */}
-                          <img src={step.image} alt={step.title} className="w-full h-48 sm:h-64 lg:h-80 object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                          <img src={step.image} alt={step.title} className="w-full h-48 sm:h-64 lg:h-80 object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" width="800" height="600" />
                           <div className="absolute top-4 left-4 z-20 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center font-bold text-lg md:text-xl text-blue-600 shadow-lg">
                              {idx + 1}
                           </div>
@@ -572,7 +573,7 @@ const HomePage: React.FC = () => {
              renderItem={(t: typeof TESTIMONIALS[0]) => (
                 <div className="w-[280px] sm:w-[320px] md:w-[400px] bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300">
                     <div className="flex items-center gap-4 mb-6">
-                      <img src={t.avatar} alt={t.name} className="w-10 h-10 md:w-14 md:h-14 rounded-full object-cover border-2 border-slate-100" />
+                      <img src={t.avatar} alt={t.name} className="w-10 h-10 md:w-14 md:h-14 rounded-full object-cover border-2 border-slate-100" loading="lazy" width="56" height="56" />
                       <div>
                         <div className="text-sm md:text-lg font-bold text-slate-900">{t.name}</div>
                         <div className="text-blue-600 font-bold text-[10px] md:text-xs uppercase tracking-wider">{t.company}</div>
@@ -603,7 +604,7 @@ const HomePage: React.FC = () => {
               const delay = (idx % 3) * 100;
               return (
                 <div key={ex.id} onClick={() => setVideoId(ex.videoId)} className={`group relative rounded-3xl overflow-hidden aspect-video md:aspect-[4/3] bg-slate-800 cursor-pointer fade-in-up delay-${delay} visible`}>
-                  <img src={ex.img} className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 ease-out" alt={ex.title} />
+                  <img src={ex.img} className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 ease-out" alt={ex.title} loading="lazy" width="800" height="600" />
                   
                   {/* Play Overlay */}
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
@@ -900,7 +901,7 @@ const AboutPage: React.FC = () => {
                 </div>
                 {/* Responsive Image Height */}
                 <div className="relative h-56 sm:h-72 lg:h-[600px] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl slide-in-right visible delay-200 group">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200" alt="Office Culture" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200" alt="Office Culture" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" loading="lazy" width="1200" height="800" />
                     <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent"></div>
                 </div>
             </div>
@@ -1004,7 +1005,7 @@ const PortfolioPage: React.FC = () => {
         {filtered.map((p, idx) => (
           <div key={p.id} onClick={() => setVideoId(p.videoId)} className={`group cursor-pointer fade-in-up visible delay-${(idx % 3) * 100} flex flex-col h-full`}>
             <div className="relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden mb-6 aspect-[16/10] shadow-xl border border-slate-100">
-              <img src={p.imageUrl} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt={p.title} />
+              <img src={p.imageUrl} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt={p.title} loading="lazy" width="800" height="500" />
               
               {/* Play Overlay */}
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -1117,7 +1118,7 @@ const BlogPage: React.FC = () => {
     <div className="max-w-4xl mx-auto px-6 grid gap-12 md:gap-16">
       {BLOGS.map((b, idx) => (
         <Link to={`/blog/${b.id}`} key={b.id} className={`group bg-white rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl border border-slate-100 flex flex-col md:flex-row hover:shadow-2xl hover:-translate-y-2 transition-all fade-in-up visible delay-${idx * 100}`}>
-          <div className="md:w-2/5 h-56 md:h-auto relative"><img src={b.image} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt={b.title} /></div>
+          <div className="md:w-2/5 h-56 md:h-auto relative"><img src={b.image} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt={b.title} loading="lazy" width="600" height="400" /></div>
           <div className="p-8 md:p-12 md:w-3/5 flex flex-col justify-center">
              <div className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
                {b.date} <span className="w-1 h-1 bg-slate-400 rounded-full" /> {b.category}
@@ -1323,7 +1324,7 @@ const Navbar: React.FC = () => {
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled || menu ? 'bg-white shadow-sm py-3 md:py-4 border-b border-slate-100' : 'bg-transparent py-4 lg:py-8'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center relative z-50">
         <Link to="/" className="flex items-center gap-3 group">
-          <img src={logoImage} alt="VinKand Logo" className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover drop-shadow-lg group-hover:scale-105 transition-transform" />
+          <img src={logoImage} alt="VinKand Logo" className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover drop-shadow-lg group-hover:scale-105 transition-transform" fetchPriority="high" width="48" height="48" />
           <span className="text-lg md:text-2xl font-bold tracking-tight text-slate-900">VinKand<span className="text-blue-600">.</span></span>
         </Link>
         <div className="hidden lg:flex items-center gap-10 text-base font-bold text-slate-600">
@@ -1365,7 +1366,7 @@ const Footer: React.FC = () => (
     <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 mb-12">
       <div className="col-span-1 md:col-span-2">
         <Link to="/" className="flex items-center gap-3 mb-6 text-white text-2xl font-bold group">
-          <img src={logoImage} alt="VinKand Logo" className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover drop-shadow-lg group-hover:scale-105 transition-transform" />
+          <img src={logoImage} alt="VinKand Logo" className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover drop-shadow-lg group-hover:scale-105 transition-transform" fetchPriority="high" width="48" height="48" />
           <span className="text-white">VinKand</span><span className="text-blue-600">.</span>
         </Link>
         <p className="max-w-xs mb-8 font-medium leading-relaxed">Architecting the digital future for enterprise. Secure, scalable, and intelligent.</p>
