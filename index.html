@@ -1,576 +1,186 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="p:domain_verify" content="6425cd2b7568088ebf1509e5a82a4e4a"/>
-    <link rel="icon" href="assets/logo/favicon.png" type="image/png">
-    <link rel="shortcut icon" type="image/png" href="assets/logo/favicon.png">
-    <link rel="icon" type="image/x-icon" href="assets/logo/favicon.ico">
-    <title>Vinkand Technologies - Immersive Technology Solutions</title>
-    <!-- Model Viewer Script -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BVYRQLVQDJ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VinKand Technologies | AI, AR & Immersive Digital Solutions</title>
+  <meta name="description" content="VinKand Technologies - Architecting the digital future with Enterprise AI, AR/VR experiences, and high-performance SaaS solutions. Secure, scalable, and intelligent innovation for global enterprises.">
+  <meta name="keywords" content="VinKand, AI Solutions, AR VR Development, Enterprise Software, SaaS, Digital Transformation, Immersive Technology, Machine Learning">
+  <meta name="author" content="VinKand Technologies">
+  <meta name="robots" content="index, follow">
 
-      gtag('config', 'G-BVYRQLVQDJ'); // Replace G-XXXXXXXXXX with your Measurement ID
-    </script>
-    <meta name="description" content="Vinkand Technologies specializes in AR/VR solutions, creating immersive experiences through world tracking, image tracking, location-based AR, object tracking, face filters, and virtual try-on technologies.">
-    <meta name="keywords" content="AR, VR, augmented reality, virtual reality, immersive technology, world tracking AR, image tracking AR, location based AR, face filters, virtual try-on">
-    <meta name="author" content="Vinkand Technologies">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vinkand.com/">
+  <meta property="og:title" content="VinKand Technologies | AI, AR & Immersive Digital Solutions">
+  <meta property="og:description" content="Architecting the digital future with Enterprise AI, AR/VR experiences, and high-performance SaaS solutions.">
+  <meta property="og:image" content="https://vinkand.com/assets/logo/logo.png">
 
-    <!-- Open Graph Meta Tags for better social media sharing -->
-    <meta property="og:title" content="Vinkand Technologies - Immersive Technology Solutions">
-    <meta property="og:description" content="Creating cutting-edge AR/VR solutions for businesses. Transform your digital presence with immersive technology.">
-    <meta property="og:image" content="assets/logo/logo.png">
-    <meta property="og:url" content="https://vinkand.com">
-    <meta property="og:type" content="website">
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://vinkand.com/">
+  <meta property="twitter:title" content="VinKand Technologies | AI, AR & Immersive Digital Solutions">
+  <meta property="twitter:description" content="Architecting the digital future with Enterprise AI, AR/VR experiences, and high-performance SaaS solutions.">
+  <meta property="twitter:image" content="https://vinkand.com/assets/logo/logo.png">
 
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Vinkand Technologies - Immersive Technology Solutions">
-    <meta name="twitter:description" content="Creating cutting-edge AR/VR solutions for businesses. Transform your digital presence with immersive technology.">
-    <meta name="twitter:image" content="assets/logo/logo.png">
+  <link rel="canonical" href="https://vinkand.com/">
+  <link rel="icon" type="image/png" href="/assets/logo/falcon.png">
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://vinkand.com">
-
-    <script type="application/ld+json">
+  <!-- GEO & SEO Structured Data -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Vinkand Technologies",
-      "description": "Immersive technology solutions provider specializing in AR/VR experiences",
+      "name": "VinKand Technologies",
       "url": "https://vinkand.com",
       "logo": "https://vinkand.com/assets/logo/logo.png",
+      "description": "Enterprise AI and AR/VR solutions provider specializing in digital transformation and high-performance SaaS.",
       "sameAs": [
-        "https://www.linkedin.com/company/vinkand-technologies",
-        "https://twitter.com/vinkandtech",
-        "https://www.instagram.com/vinkandtech",
-        "https://www.facebook.com/vinkandtech"
+        "https://linkedin.com/company/vinkand",
+        "https://instagram.com/vinkand",
+        "https://facebook.com/vinkand"
       ],
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "",
-        "contactType": "customer service",
-        "email": "contact@vinkand.com",
-        "availableLanguage": ["English"]
+        "contactType": "customer support",
+        "email": "hello@vinkand.com"
       },
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "Your Country"
-      }
+      "award": "Top Enterprise AI Integrator 2025"
     }
-    </script>
-
-    <!-- Add preload for critical resources -->
-    <link rel="preload" href="assets/logo/logo.png" as="image">
-    <link rel="preload" href="style.css" as="style">
-    <link rel="preload" href="script.js" as="script">
-
-    <meta name="google-site-verification" content="znG1eKpONybxcmpgQfBufxfgt0R9dJdC_GNxTMZzL7Q" />
-</head>
-<body>
-    <div class="background-container"></div>
-
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/logo/logo.png" alt="Vinkand Technologies Logo - Leading AR/VR Solutions Provider">
-                    <h1>Vinkand Technologies</h1>
-                </a>
-            </div>
-            <button class="mobile-menu-btn">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="#services">Services</a>
-                <a href="projects.html">Projects</a>
-                <a href="about.html">About Us</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Immersive AR/VR Solutions for Business Innovation</h1>
-                    <h2>Welcome to the new Era of technology</h2>
-                    <p>Solving problems using advanced futuristic and Immersive technologies.</p>
-                    <div class="hero-buttons">
-                        <a href="#services" class="cta-button">Learn More</a>
-                        <a href="#contact" class="cta-button secondary">Contact Us</a>
-                    </div>
-                </div>
-                <div class="hero-model">
-                    <model-viewer
-                        src="assets/models/sneaker.glb"
-                        ios-src="assets/models/sneaker.usdz"
-                        alt="An animated 3D Sneaker"
-                        auto-rotate
-                        camera-controls
-                        autoplay
-                        shadow-intensity="1"
-                        camera-orbit="70deg auto 4.5m"
-                        environment-image="neutral"
-                        exposure="1"
-                        interaction-prompt="none"
-                        loading="eager"
-                    ></model-viewer>
-                </div>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <a href="#services">
-                <i class="fas fa-chevron-down"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Services</h2>
-                <p>Transforming ideas into immersive experiences</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>World Tracking AR</h3>
-                    <p>Place and interact with virtual content in the real world. Perfect for furniture visualization, educational content, and interactive experiences that adapt to your environment.</p>
-                    <a href="/projects.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-image"></i>
-                    </div>
-                    <h3>Image Tracking AR</h3>
-                    <p>Bring static images to life with interactive AR content. Ideal for marketing materials, educational resources, and engaging product packaging experiences.</p>
-                    <a href="/projects.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Location Based AR</h3>
-                    <p>Create location-aware AR experiences that engage users in specific places. Perfect for tourism, navigation, and location-based gaming applications.</p>
-                    <a href="/projects.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cube"></i>
-                    </div>
-                    <h3>Object Tracking AR</h3>
-                    <p>Track and augment real-world objects with digital content. Ideal for product demonstrations, training materials, and interactive user manuals.</p>
-                    <a href="/projects.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-smile"></i>
-                    </div>
-                    <h3>Face Filters AR</h3>
-                    <p>Create engaging face tracking AR experiences. Perfect for social media filters, virtual makeup try-ons, and interactive entertainment applications.</p>
-                    <a href="/projects.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-tshirt"></i>
-                    </div>
-                    <h3>Virtual Try-On</h3>
-                    <p>Enable customers to virtually try products before purchase. Ideal for fashion, accessories, and cosmetics industries to enhance online shopping experience.</p>
-                    <a href="/projects.html" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Platforms Section -->
-    <section id="platforms" class="platforms">
-        <div class="container">
-            <div class="section-header">
-                <h2>Supported Platforms</h2>
-                <p>Our AR solutions are available across multiple platforms, ensuring maximum reach and accessibility</p>
-            </div>
-            <div class="platforms-grid">
-                <div class="platform-card">
-                    <div class="platform-icon">
-                        <i class="fab fa-android"></i>
-                    </div>
-                    <h3>Android</h3>
-                    <p>Native Android AR applications using ARCore technology. Support for a wide range of Android devices with enhanced performance and features.</p>
-                    <ul class="platform-features">
-                        <li><i class="fas fa-check"></i> ARCore Integration</li>
-                        <li><i class="fas fa-check"></i> Native Performance</li>
-                        <li><i class="fas fa-check"></i> Play Store Distribution</li>
-                    </ul>
-                </div>
-                <div class="platform-card">
-                    <div class="platform-icon">
-                        <i class="fab fa-apple"></i>
-                    </div>
-                    <h3>iOS</h3>
-                    <p>High-quality iOS AR experiences using ARKit. Optimized for Apple devices with seamless integration of native features.</p>
-                    <ul class="platform-features">
-                        <li><i class="fas fa-check"></i> ARKit Integration</li>
-                        <li><i class="fas fa-check"></i> iOS Optimization</li>
-                        <li><i class="fas fa-check"></i> App Store Distribution</li>
-                    </ul>
-                </div>
-                <div class="platform-card">
-                    <div class="platform-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>WebAR</h3>
-                    <p>Browser-based AR experiences with no app installation required. Instant access across all devices supporting WebXR.</p>
-                    <ul class="platform-features">
-                        <li><i class="fas fa-check"></i> No App Required</li>
-                        <li><i class="fas fa-check"></i> Cross-Platform</li>
-                        <li><i class="fas fa-check"></i> Instant Access</li>
-                    </ul>
-                </div>
-                <div class="platform-card">
-                    <div class="platform-icon">
-                        <i class="fas fa-vr-cardboard"></i>
-                    </div>
-                    <h3>Meta Quest</h3>
-                    <p>Immersive mixed reality experiences for Meta Quest devices. Full support for Quest's advanced tracking and interaction features.</p>
-                    <ul class="platform-features">
-                        <li><i class="fas fa-check"></i> Mixed Reality</li>
-                        <li><i class="fas fa-check"></i> Hand Tracking</li>
-                        <li><i class="fas fa-check"></i> Quest Store Ready</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Portfolio</h2>
-                <p>Explore our latest AR projects and success stories</p>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/YCsuwhvcFgk?controls=0&autoplay=0&mute=1&playsinline=1&rel=0"
-                            title="Augmented Reality part 1 "
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Augmented Reality part 1</h3>
-                        <p>Augmented Reality part 1</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/TH9qMNiwgL8?controls=0&autoplay=0&mute=1&playsinline=1&rel=0"
-                            title="Augmented Reality part 2"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Augmented Reality part 2</h3>
-                        <p>Augmented Reality part 2</p>
-                    </div>
-                </div>
-                <!-- Add more portfolio items as needed -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Live Demo Section -->
-    <section id="demo" class="demo">
-        <div class="container">
-            <div class="section-header">
-                <h2>Live Demo</h2>
-                <p>Experience our AR technology in action</p>
-            </div>
-            <div class="demo-content">
-                <div class="demo-text">
-                    <h3>Try Our AR Experience</h3>
-                    <p>Scan the QR code with your mobile device to experience our AR technology firsthand. See how we transform regular products into interactive 3D experiences.</p>
-                    <ul class="demo-features">
-                        <li><i class="fas fa-check"></i> No app installation required</li>
-                        <li><i class="fas fa-check"></i> Works on most modern devices</li>
-                        <li><i class="fas fa-check"></i> Instant AR visualization</li>
-                    </ul>
-                </div>
-                <div class="demo-visual">
-                    <div class="qr-code">
-                        <img src="assets\qrcode\qrcode.png" alt="Demo QR Code">
-                    </div>
-                    <p class="demo-instruction">Scan to try AR demo</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2>Client Testimonials</h2>
-                <p>What our clients say about us</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <i class="fas fa-quote-left"></i>
-                        <p>"Vinkand Technologies transformed our product showcase with their AR solution. Our customers can now interact with detailed 3D models of our products, leading to a significant increase in customer engagement and better understanding of product features."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="assets/testimone/img1.jpg" alt="Fithry Restusari - Creative Art Director at Givaudan">
-                        <div class="author-info">
-                            <h4>Fithry Restusari</h4>
-                            <p>Creative Art Director, Givaudan</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <i class="fas fa-quote-left"></i>
-                        <p>"Working with Vinkand to create our AR Tire Tread Training App was fantastic! Their expertise, innovation, and seamless collaboration delivered a user-friendly, highly effective app that exceeded expectations. Highly recommended!"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="assets/testimone/img2.jpg" alt="Christian Dale - Product Manager at Anyline">
-                        <div class="author-info">
-                            <h4>Christian Dale</h4>
-                            <p>Product Manager, Anyline</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <i class="fas fa-quote-left"></i>
-                        <p>"Vinkand's educational AR platform has transformed how we teach complex concepts. Students can now interact with 3D models and simulations, making abstract concepts tangible and easier to understand."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="assets/testimone/img3.jpg" alt="Dr. Ginny Weibel - Director at Bloomsburg Museum">
-                        <div class="author-info">
-                            <h4>Dr. Ginny Weibel</h4>
-                            <p>Director, Bloomsburg Museum</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>150+</h3>
-                    <p>Customers</p>
-                </div>
-                <div class="stat-item">
-                    <h3>500+</h3>
-                    <p>Projects</p>
-                </div>
-                <div class="stat-item">
-                    <h3>25+</h3>
-                    <p>Countries</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>Trust in Us</h2>
-                <p>Your partner in digital transformation</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>At Vinkand Technologies, we specialize in creating cutting-edge digital solutions that help businesses thrive in the modern era. Our team of experts combines creativity with technical expertise to deliver outstanding results.</p>
-                    <div class="about-features">
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Expert Team</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Quality Delivery</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Innovation Focus</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Contact Us</h2>
-                <p>Get in touch for your AR/VR solutions</p>
-            </div>
-            <div class="contact-wrapper">
-                <!-- Contact Info -->
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div class="info-content">
-                            <h3>Email</h3>
-                            <p><a href="mailto:contact@vinkand.com">info@vinkand.com</a></p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div class="info-content">
-                            <h3>Address</h3>
-                            <p>Vinkand Technologies,Coimbatore, Tamil Nadu, India</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <div class="info-content">
-                            <h3>Phone</h3>
-                            <p><a href="tel:+1234567890">+91 9876543210</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contact Form -->
-                <form id="contact-form" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">
-                        <span class="btn-text">Send Message</span>
-                        <div class="btn-loading" style="display: none;">
-                            <i class="fas fa-spinner fa-spin"></i>
-                        </div>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <div class="footer-logo">
-                        <img src="assets/logo/logo.png" alt="Vinkand Technologies Logo">
-                    </div>
-                    <h3>Vinkand Technologies</h3>
-                    <p class="hero-text">Welcome to the new Era of technology</p>
-                    <p>Solving problems using advanced futuristic and Immersive technologies.</p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/company/vinkand-technologies" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/vinkand.tech/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=61573374046970" target="_blank"><i class="fab fa-facebook"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="#services">Services</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Our Services</h4>
-                    <a href="#services">World Tracking AR</a>
-                    <a href="#services">Image Tracking AR</a>
-                    <a href="#services">Location Based AR</a>
-                    <a href="#services">Object Tracking AR</a>
-                    <a href="#services">Face Filters AR</a>
-                    <a href="#services">Virtual Try-On</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Legal</h4>
-                    <a href="terms-conditions.html">Terms & Conditions</a>
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                    <a href="refund-policy.html">Refund Policy</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Vinkand Technologies. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script src="contact.js"></script>
-    <script src="script.js"></script>
-
-    <script type="application/ld+json">
+  </script>
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "What AR/VR solutions do you offer?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We offer World Tracking AR, Image Tracking AR, Location Based AR, Object Tracking AR, Face Filters AR, and Virtual Try-On solutions."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Which platforms do you support?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We support Android, iOS, WebAR, and Meta Quest platforms."
-        }
-      }]
+      "@type": "WebSite",
+      "name": "VinKand Technologies",
+      "url": "https://vinkand.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://vinkand.com/#/portfolio?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     }
-    </script>
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      scroll-behavior: smooth;
+      font-size: 16px; 
+      color: #0f172a;
+      line-height: 1.6;
+    }
+    
+    *:focus-visible {
+      outline: 2px solid #2563eb;
+      outline-offset: 2px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* --- Animations --- */
+    
+    /* Fade In Up */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Slide In Left */
+    .slide-in-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .slide-in-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Slide In Right */
+    .slide-in-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .slide-in-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Scale Up */
+    .scale-up {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .scale-up.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Continuous Animations */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.2); }
+      50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.5); }
+    }
+    .animate-glow {
+      animation: pulse-glow 3s infinite;
+    }
+
+    .animate-marquee {
+      display: flex;
+      animation: marquee 40s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Delays */
+    .delay-100 { transition-delay: 100ms; }
+    .delay-200 { transition-delay: 200ms; }
+    .delay-300 { transition-delay: 300ms; }
+    .delay-400 { transition-delay: 400ms; }
+    .delay-500 { transition-delay: 500ms; }
+
+    /* Hide Scrollbar */
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+  <link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden antialiased selection:bg-blue-100 selection:text-blue-900">
+  <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
 </body>
 </html>

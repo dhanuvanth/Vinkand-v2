@@ -1,1 +1,0 @@
-// File can be removed - using static gradient background instead
