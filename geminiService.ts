@@ -6,7 +6,7 @@ const COMPANY_KNOWLEDGE_BASE = `
 COMPANY OVERVIEW:
 VinKand Technologies is a global leader in Enterprise AI, Spatial Computing, and SaaS architecture.
 Founded: 2019.
-Headquarters: Silicon Valley, CA.
+Headquarters: Coimbatore, Tamil Nadu, India.
 Reach: 500+ Projects delivered in 59+ countries.
 Core Value: Engineering Trust in a Digital First World.
 
@@ -44,8 +44,8 @@ CASE STUDIES (REFERENCE IF ASKED):
 
 CONTACT INFO:
 Email: info@vinkand.com
-Phone: +1 (555) 123-4567
-Location: Silicon Valley, CA.
+Phone: +91 422 456 7890
+Location: Tidel Park, 1st Floor, No. 4, Rajiv Gandhi Salai, Tharamani, Coimbatore - 641022, Tamil Nadu, India.
 `;
 
 const systemInstruction = `
@@ -85,19 +85,19 @@ export const getAIConsultation = async (currentMessage: string, history: ChatMes
     const ai = new GoogleGenAI({ apiKey });
     const model = "gemini-3-flash-preview"; // Using latest preview model
 
-    // Convert chat history to Gemini format
-    // 'ai' in UI -> 'model' in API
-    // 'user' in UI -> 'user' in API
-    const conversationHistory = history.map(msg => ({
-      role: msg.role === 'ai' ? 'model' : 'user',
-      parts: [{ text: msg.text }],
-    }));
+  // Convert chat history to Gemini format
+  // 'ai' in UI -> 'model' in API
+  // 'user' in UI -> 'user' in API
+  const conversationHistory = history.map(msg => ({
+    role: msg.role === 'ai' ? 'model' : 'user',
+    parts: [{ text: msg.text }],
+  }));
 
-    // Add the current new message to the end
-    const contents = [
-      ...conversationHistory,
-      { role: 'user', parts: [{ text: currentMessage }] }
-    ];
+  // Add the current new message to the end
+  const contents = [
+    ...conversationHistory,
+    { role: 'user', parts: [{ text: currentMessage }] }
+  ];
 
     const response = await ai.models.generateContent({
       model,

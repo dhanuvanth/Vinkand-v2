@@ -69,3 +69,4 @@
 - Check that `window.gtag` is defined in browser console
 - Verify the path is being sent correctly
 
+

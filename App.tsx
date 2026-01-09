@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { HashRouter as Router, Routes, Route, Link, useLocation, useParams } from 'react-router-dom';
 import { 
   Menu, X, ArrowRight, CheckCircle2, Mail, Phone, MapPin, Linkedin, Instagram, 
-  Facebook, ShieldCheck, Sparkles, Zap, Play, ChevronLeft, ChevronRight, Globe, PlayCircle, Target, Clock, Tag
+  Facebook, Youtube, ShieldCheck, Sparkles, Zap, Play, ChevronLeft, ChevronRight, Globe, PlayCircle, Target, Clock, Tag
 } from 'lucide-react';
 import { SERVICES, STATS, TECH_PARTNERS, WORKFLOW, EXPLORATIONS, FAQ_ITEMS, TESTIMONIALS, BLOGS, IconMap, PRODUCTS, PORTFOLIO, PORTFOLIO_CATEGORIES, TEAM, CORE_VALUES, MILESTONES } from './constants';
 import SectionHeader from './components/SectionHeader';
@@ -962,7 +962,7 @@ const AboutPage: React.FC = () => {
                  <div className="relative z-10">
                      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Join the Revolution</h2>
                      <p className="text-base sm:text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto">We are always looking for exceptional engineers, designers, and strategists. <br className="hidden md:block"/>Help us build the impossible.</p>
-                     <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-base md:text-lg hover:bg-slate-100 transition-colors shadow-lg">View Open Positions</button>
+                     <a href="mailto:hr@vinkand.com" className="inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-base md:text-lg hover:bg-slate-100 transition-colors shadow-lg">hr@vinkand.com</a>
                  </div>
                  <div className="absolute top-[-50%] right-[-10%] w-[500px] h-[500px] bg-blue-500 rounded-full opacity-50 blur-3xl"></div>
                  <div className="absolute bottom-[-50%] left-[-10%] w-[500px] h-[500px] bg-blue-700 rounded-full opacity-50 blur-3xl"></div>
@@ -1204,11 +1204,11 @@ const ContactPage: React.FC = () => {
                 </div>
                 <div className="flex gap-6 items-start">
                   <div className="p-4 md:p-5 bg-blue-50 text-blue-600 rounded-2xl"><Phone size={24} /></div>
-                  <div><p className="font-bold text-base md:text-lg text-slate-900">Call Us</p><p className="text-slate-600 text-base md:text-lg">+1 (555) 123-4567</p></div>
+                  <div><p className="font-bold text-base md:text-lg text-slate-900">Call Us</p><p className="text-slate-600 text-base md:text-lg">+91 422 456 7890</p></div>
                 </div>
                 <div className="flex gap-6 items-start">
                   <div className="p-4 md:p-5 bg-blue-50 text-blue-600 rounded-2xl"><MapPin size={24} /></div>
-                  <div><p className="font-bold text-base md:text-lg text-slate-900">Global HQ</p><p className="text-slate-600 text-base md:text-lg">Silicon Valley, CA 94043</p></div>
+                  <div><p className="font-bold text-base md:text-lg text-slate-900">Registered Office</p><p className="text-slate-600 text-base md:text-lg">Tidel Park, 1st Floor,<br />No. 4, Rajiv Gandhi Salai,<br />Tharamani, Coimbatore - 641022,<br />Tamil Nadu, India</p></div>
                 </div>
               </div>
             </div>
@@ -1371,9 +1371,42 @@ const Footer: React.FC = () => (
         </Link>
         <p className="max-w-xs mb-8 font-medium leading-relaxed">Architecting the digital future for enterprise. Secure, scalable, and intelligent.</p>
         <div className="flex gap-4">
-          {[Linkedin, Instagram, Facebook].map((Icon, i) => (
-            <a key={i} href="#" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all transform hover:scale-110"><Icon size={18} /></a>
-          ))}
+          <a 
+            href="https://www.linkedin.com/company/vinkand-technologies" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all transform hover:scale-110"
+            aria-label="LinkedIn"
+          >
+            <Linkedin size={18} />
+          </a>
+          <a 
+            href="https://www.instagram.com/vinkand.tech/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all transform hover:scale-110"
+            aria-label="Instagram"
+          >
+            <Instagram size={18} />
+          </a>
+          <a 
+            href="https://www.facebook.com/share/17sU7F6pPr/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all transform hover:scale-110"
+            aria-label="Facebook"
+          >
+            <Facebook size={18} />
+          </a>
+          <a 
+            href="https://www.youtube.com/@vinkandtech" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all transform hover:scale-110"
+            aria-label="YouTube"
+          >
+            <Youtube size={18} />
+          </a>
         </div>
       </div>
       <div>
