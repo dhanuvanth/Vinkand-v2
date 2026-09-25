@@ -1,0 +1,18 @@
+# VinKand Technologies
+
+> Software studio in Tamil Nadu, India. We build AI systems, AR experiences,
+> mobile apps and high-scale web platforms for growing businesses.
+
+## Services
+- [Enterprise AI Architecture](https://vinkand.com/services/1): Deploying custom Large Language Models (LLMs) and predictive engines that integrate securely into your existing corporate infrastructure.
+- [High-Scale Web Platforms](https://vinkand.com/services/2): Architecting resilient SaaS ecosystems designed to handle millions of concurrent requests with 99.99% uptime availability.
+- [Intelligent Mobile Systems](https://vinkand.com/services/3): Native iOS and Android solutions featuring on-device machine learning, offline capability, and secure API middleware.
+- [Immersive Spatial Computing](https://vinkand.com/services/4): Industrial-grade AR/VR training simulations and luxury retail experiences built for Apple Vision Pro and Meta Quest.
+
+## Insights
+- [The Future of Spatial Retail](https://vinkand.com/blog/b1): Analyzing how Augmented Reality is shifting consumer behavior in luxury markets.
+- [Generative AI in the Enterprise](https://vinkand.com/blog/b2): Practical frameworks for deploying LLMs without leaking proprietary IP.
+- [The Rise of Edge AI: Processing at the Source](https://vinkand.com/blog/b3): Reducing latency and bandwidth costs by moving intelligence to the device.
+- [VR Training: The New Industrial Standard](https://vinkand.com/blog/b4): Reducing risk and operational costs through immersive simulation training.
+- [Predictive Analytics in Supply Chain](https://vinkand.com/blog/b5): How AI models are anticipating disruptions before they happen.
+- [The B2B Mobile Experience Gap](https://vinkand.com/blog/b6): Why enterprise mobile apps must match consumer standards to drive adoption.

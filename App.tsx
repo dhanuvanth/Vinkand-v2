@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { HashRouter as Router, Routes, Route, Link, useLocation, useParams } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation, useParams } from 'react-router-dom';
 import { 
   Menu, X, ArrowRight, CheckCircle2, Mail, Phone, MapPin, Linkedin, Instagram, 
   Facebook, Youtube, ShieldCheck, Sparkles, Zap, Play, ChevronLeft, ChevronRight, Globe, PlayCircle, Target, Clock, Tag
@@ -26,7 +26,7 @@ const useGoogleAnalytics = () => {
   useEffect(() => {
     if (typeof window.gtag === 'function') {
       // Track page view on route change for SPA
-      const path = location.pathname + location.hash;
+      const path = location.pathname;
       // Get GA ID from the script tag or use default
       const gaScript = document.querySelector('script[src*="googletagmanager.com/gtag/js"]');
       if (gaScript) {
@@ -62,9 +62,20 @@ const useSEO = (title: string, description?: string) => {
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) ogTitle.setAttribute('content', fullTitle);
 
+    // Update the canonical to match the current route. Without this the
+    // canonical stays pinned to whatever the prerendered document declared, so
+    // every client-side navigation would keep claiming the entry URL.
+    let canonicalEl = document.querySelector('link[rel="canonical"]');
+    const oldCanonical = canonicalEl?.getAttribute('href');
+    if (canonicalEl) {
+      const url = new URL(window.location.pathname, window.location.origin);
+      canonicalEl.setAttribute('href', url.toString());
+    }
+
     return () => {
       document.title = prevTitle;
       if (oldDesc && metaDesc) metaDesc.setAttribute('content', oldDesc);
+      if (oldCanonical && canonicalEl) canonicalEl.setAttribute('href', oldCanonical);
     };
   }, [title, description]);
 };
@@ -156,7 +167,7 @@ const ServiceDetailPage: React.FC = () => {
                  "@type": "ListItem",
                  "position": 2,
                  "name": service.title,
-                 "item": `https://vinkand.com/#/services/${id}`
+                 "item": `https://vinkand.com/services/${id}`
                }
              ]
            })
@@ -257,13 +268,13 @@ const BlogDetailPage: React.FC = () => {
                  "@type": "ListItem",
                  "position": 2,
                  "name": "Blog",
-                 "item": "https://vinkand.com/#/blog"
+                 "item": "https://vinkand.com/blog"
                },
                {
                  "@type": "ListItem",
                  "position": 3,
                  "name": blog.title,
-                 "item": `https://vinkand.com/#/blog/${id}`
+                 "item": `https://vinkand.com/blog/${id}`
                }
              ]
            })

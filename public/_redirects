@@ -1,2 +1,9 @@
-/*    /index.html   200
-
+# No catch-all rewrite to /index.html.
+#
+# This used to be: /*  /index.html  200
+#
+# That rule made Cloudflare serve the homepage shell for EVERY url, which both
+# hid the prerendered pages and told Google that every address was really the
+# homepage. With the SPA now prerendered, real files exist for every route, so
+# the rewrite is removed and each URL serves its own document. Unknown URLs now
+# return a genuine 404 instead of a 200 serving the homepage (a soft 404).
